@@ -27,7 +27,6 @@ app.get("/", function(req, res) {
         }
       ]
     };
-    //   });
     const jsonData = JSON.stringify(data);
 
     const url = "https://us18.api.mailchimp.com/3.0/lists/95c91566e9";
@@ -48,7 +47,7 @@ app.get("/", function(req, res) {
         console.log(JSON.parse(data));
       });
     });
-    //request.write(jsonData);
+    request.write(jsonData);
     request.end();
   });
 });
@@ -60,8 +59,3 @@ app.post("/failure", function(req, res) {
 app.listen(process.env.PORT || 3005, function() {
   console.log("all good really");
 });
-
-//api key
-// 3ff6aabb146a083ff91aa4d80fceb988-us18
-//list id
-// 95c91566e9
