@@ -57,5 +57,5 @@ app.post("/failure", function(req, res) {
 });
 
 app.listen(process.env.PORT || 3005, function() {
-  console.log("all good really");
+  console.log("running");
 });
